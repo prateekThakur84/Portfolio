@@ -38,6 +38,7 @@ const Loading: React.FC<LoadingScreenProps> = ({ onLoaded }) => {
 
   const [currentText, setCurrentText] = useState(loadingTexts[0]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (progress < 100) {
       const textInterval = setInterval(() => {
@@ -58,7 +59,7 @@ const Loading: React.FC<LoadingScreenProps> = ({ onLoaded }) => {
               Welcome!
             </h1>
             <p className="text-lg text-gray-300 mt-2">
-              Let's build something amazing.
+              Let&apos;s build something amazing.
             </p>
           </div>
         ) : (
@@ -100,7 +101,7 @@ const Loading: React.FC<LoadingScreenProps> = ({ onLoaded }) => {
 
             <div className="w-full bg-gray-700 rounded-full h-2.5 mt-8 overflow-hidden">
               <div
-                className="bg-blue-600   h-2.5 rounded-full"
+                className="bg-blue-600 h-2.5 rounded-full"
                 style={{
                   width: `${progress}%`,
                   transition: "width 0.1s linear",
