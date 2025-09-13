@@ -38,7 +38,6 @@ const Loading: React.FC<LoadingScreenProps> = ({ onLoaded }) => {
 
   const [currentText, setCurrentText] = useState(loadingTexts[0]);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (progress < 100) {
       const textInterval = setInterval(() => {
@@ -48,7 +47,7 @@ const Loading: React.FC<LoadingScreenProps> = ({ onLoaded }) => {
       }, 2000);
       return () => clearInterval(textInterval);
     }
-  }, [progress]);
+  }, [progress, loadingTexts]);
 
   return (
     <div className="fixed inset-0 bg-gray-900 text-white flex flex-col items-center justify-center z-50 transition-opacity duration-1000">
