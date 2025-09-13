@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Loader from "@/components/Loading"
+import Loader from "@/components/Loading";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -23,8 +23,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   return (
     <>
       {loading ? (
-        <Loader onLoaded={() => setLoading(false)}
-        />
+        <Loader onLoaded={() => setLoading(false)}/>
       ) : (
         <>
           <Analytics />
