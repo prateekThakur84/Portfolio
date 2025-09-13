@@ -3,7 +3,6 @@ import { useState, useTransition, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "@mui/icons-material";
-import ImageSwiper from "./ImageSwiper";
 import about from "@/assets/about.png";
 import { SiCodechef, SiGeeksforgeeks, SiLeetcode } from "react-icons/si";
 
