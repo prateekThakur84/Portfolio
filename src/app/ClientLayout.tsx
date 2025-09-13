@@ -23,7 +23,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   return (
     <>
       {loading ? (
-        <Loader onLoaded={() => setLoading(false)}/>
+        <Loader onLoaded={() => setLoading(false)}
+        />
       ) : (
         <>
           <Analytics />
