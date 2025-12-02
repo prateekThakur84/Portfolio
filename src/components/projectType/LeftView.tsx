@@ -6,7 +6,19 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import ImageCarousel from "../ImageCarousel";
 
-const LeftView = ({ id, name, description, img, tech, source, demo, images }) => {
+// Define strict types to satisfy the build
+interface LeftViewProps {
+  id: any;
+  name: any;
+  description: any[];
+  img?: any;     // Added '?' to make it optional
+  tech: any[];
+  source: string;
+  demo: string;
+  images: any;   // This is the new main prop
+}
+
+const LeftView = ({ id, name, description, img, tech, source, demo, images }: LeftViewProps) => {
   const refContent = useRef(null);
   const inViewContent = useInView(refContent);
 
@@ -82,6 +94,7 @@ const LeftView = ({ id, name, description, img, tech, source, demo, images }) =>
         className="order-1 col-span-7 flex justify-center xl:justify-end xl:order-2"
       >
         <div className="relative h-[300px] w-full sm:h-[350px] md:w-[500px]"> 
+          {/* Fallback to 'img' if 'images' is missing, handled safely now */}
           <ImageCarousel images={images || img} />
         </div>
       </motion.div>

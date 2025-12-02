@@ -6,14 +6,26 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import ImageCarousel from "../ImageCarousel";
 
-const RightView = ({ id, name, description, img, tech, source, demo, images }) => {
+// Define strict types to satisfy the build
+interface RightViewProps {
+  id: any;
+  name: any;
+  description: any[];
+  img?: any;    // Added '?' to make it optional
+  tech: any[];
+  source: string;
+  demo: string;
+  images: any;  // This is the new main prop
+}
+
+const RightView = ({ id, name, description, img, tech, source, demo, images }: RightViewProps) => {
   const refContent = useRef(null);
   const inViewContent = useInView(refContent);
 
   return (
     <div className="mt-[80px] grid grid-cols-1 md:px-10 lg:mt-[120px] xl:grid-cols-12 gap-y-10 xl:gap-0">
       
-      {/* --- CAROUSEL SECTION (Left Side in RightView layout) --- */}
+      {/* --- CAROUSEL SECTION --- */}
       <motion.div
         ref={refContent}
         initial={{ opacity: 0, x: -50, filter: "blur(6px)" }}
@@ -30,7 +42,7 @@ const RightView = ({ id, name, description, img, tech, source, demo, images }) =
         </div>
       </motion.div>
 
-      {/* --- TEXT CONTENT SECTION (Right Side) --- */}
+      {/* --- TEXT CONTENT SECTION --- */}
       <motion.div
         ref={refContent}
         initial={{ opacity: 0, x: 50 }}
