@@ -3,7 +3,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const ImageCarousel = ({ images }) => {
+// FIXED: Added ": { images: any }" to satisfy TypeScript build
+const ImageCarousel = ({ images }: { images: any }) => {
   // 1. Handle single image vs array
   const validImages = Array.isArray(images) 
     ? images 
@@ -18,12 +19,14 @@ const ImageCarousel = ({ images }) => {
   }
 
   // 3. NEXT.JS IMAGE HELPER
-  const getImageSrc = (image) => {
+  // FIXED: Added ": any" type
+  const getImageSrc = (image: any) => {
     return typeof image === "string" ? image : image?.src || "";
   };
 
   const slideVariants = {
-    enter: (direction) => ({
+    // FIXED: Added types for direction
+    enter: (direction: number) => ({
       x: direction > 0 ? 1000 : -1000,
       opacity: 0,
     }),
@@ -32,14 +35,14 @@ const ImageCarousel = ({ images }) => {
       x: 0,
       opacity: 1,
     },
-    exit: (direction) => ({
+    exit: (direction: number) => ({
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
     }),
   };
 
-  const paginate = (newDirection) => {
+  const paginate = (newDirection: number) => {
     setDirection(newDirection);
     setCurrentIndex((prev) => {
       let nextIndex = prev + newDirection;
@@ -72,9 +75,7 @@ const ImageCarousel = ({ images }) => {
             if (swipe < -10000) paginate(1);
             else if (swipe > 10000) paginate(-1);
           }}
-          // --- CHANGE IS HERE ---
-          // changed 'object-cover' to 'object-contain'
-          // This ensures the whole image is visible without cropping
+          // FIXED: kept 'object-contain' so images look normal (not zoomed)
           className="absolute h-full w-full object-contain bg-black/20" 
           alt="Project Screenshot"
         />
@@ -101,7 +102,7 @@ const ImageCarousel = ({ images }) => {
       {/* Dots */}
       {validImages.length > 1 && (
         <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2 z-10">
-          {validImages.map((_, index) => (
+          {validImages.map((_: any, index: number) => (
             <div
               key={index}
               onClick={() => {
