@@ -59,7 +59,7 @@ const About = () => {
             alt="About"
             width={300}
             height={400}
-            className="size-[300px] rotate-[2.5deg] cursor-pointer rounded-full transition-all duration-300 ease-in-out hover:scale-[1.02] sm:size-[350px]"
+            className="size-[300px] cursor-pointer rounded-full transition-all duration-300 ease-in-out hover:scale-[1.02] sm:size-[350px]"
             priority
           />
         </motion.div>
@@ -123,9 +123,9 @@ const About = () => {
                   <div className="text-sm text-gray-500">
                     Solved{" "}
                     <span className="font-bold text-heading">
-                      500+ DSA questions{" "}
+                      600+ DSA questions{" "}
                     </span>
-                    on various OJ’s.
+                    on various online platforms.
                   </div>
                 </div>
                 <div className="flex items-start gap-1 sm:gap-2">
@@ -133,9 +133,9 @@ const About = () => {
                   <div className="text-sm text-gray-500">
                     Secured{" "}
                     <span className="font-bold text-heading">
-                      Global Rank 585{" "}
+                      Global Rank 139{" "}
                     </span>
-                    (Division-3) in Codechef Starters 201 2025.
+                    in Codechef Starters 205 2025.
                   </div>
                 </div>
                 <div className="flex items-start gap-1 sm:gap-2">
@@ -143,9 +143,9 @@ const About = () => {
                   <div className="text-sm text-gray-500">
                     Secured{" "}
                     <span className="font-bold text-heading">
-                      Global Rank 937{" "}
+                      Global Rank 4817{" "}
                     </span>
-                    (Division-3) in Codechef Starters 202 2025.
+                     in TCS CodeVita Season 13 Round 1 out of top 20,000 participants nationally.
                   </div>
                 </div>
                 

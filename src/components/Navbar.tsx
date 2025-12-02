@@ -37,9 +37,9 @@ const Navbar = () => {
           className="min-w-[150px] cursor-pointer text-lg font-[600] tracking-wide sm:text-xl sm:font-[800]"
         >
           {/* for mobile view */}
-          <span className="sm:hidden">@Prateek</span>
+          <span className="sm:hidden">Prateek</span>
           {/* for web view */}
-          <span className="hidden sm:block">@Prateek Thakur</span>
+          <span className="hidden sm:block">Prateek Thakur</span>
         </ScrollLink>
 
         {/* toggle navbar mobile view */}

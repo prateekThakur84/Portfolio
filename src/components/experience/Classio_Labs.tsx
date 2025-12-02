@@ -3,11 +3,21 @@ import { ArrowRight } from "@mui/icons-material";
 import { motion } from "framer-motion";
 
 export default function ClassioLabs() {
-  const tasks = [
-    {
-      text: "Contributing to the development and optimization of web and mobile applications as part of the frontend team, ensuring seamless user experience across platforms.",
-    },
-  ];
+ const tasks = [
+  {
+    text: "Developed 15+ RESTful APIs using Node.js and Express.js, reducing response time by 25%",
+  },
+  {
+    text: "Integrated APIs with the frontend, collaborating with a team of 3 engineers, improving performance by 20%",
+  },
+  {
+    text: "Implemented OAuth 2.0 authentication with RBAC for 500+ users",
+  },
+  {
+    text: "Optimized 20+ database queries and indexing, improving data retrieval speeds by 30%",
+  },
+];
+
 
   return (
     <motion.div
@@ -47,7 +57,7 @@ export default function ClassioLabs() {
           <div className="flex flex-row space-x-2">
             <ArrowRight className="h-5 w-4 flex-none" />
             <span className="font-bold text-heading">
-              Technologies used: React.js, JavaScript, Node.js.
+              Technologies used: ReactJS, NodeJS, MongoDB, ExpressJS.
             </span>
           </div>
         </div>

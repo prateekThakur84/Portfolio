@@ -95,6 +95,10 @@ export const MySkills = [
         name: "MySQL",
         icon: "MysqlOriginal",
       },
+      {
+        name: "Redis",
+        icon: "RedisOriginal",
+      },
     ],
     index: 3,
   },
@@ -122,6 +126,10 @@ export const MySkills = [
         name: "Jira",
         icon: "JiraOriginal",
       },
+      {
+        name: "Figma",
+        icon: "FigmaOriginal",
+      },
     ],
     index: 5,
   },
@@ -141,6 +149,10 @@ export const MySkills = [
       {
         name: "Operating Systems",
         icon: "LinuxOriginal",
+      },
+      {
+        name: "Computer Networks",
+        icon: "NetworkWiredOriginal ",
       },
     ],
     index: 6,
