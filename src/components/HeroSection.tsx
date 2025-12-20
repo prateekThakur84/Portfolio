@@ -106,7 +106,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
             >
               <a
-                href="https://drive.google.com/file/d/1mCNadHdM_LpV_CTF8EPOQEcwZ3-gdjjN/view?usp=sharing"
+                href="https://drive.google.com/file/d/1T6VwTHfRWjHhCQdC4raLjbCkpqnXGYRD/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="duration-400 w-full rounded-full border-2 border-white bg-transparent px-6 py-3 text-center text-lg font-medium text-white transition-all duration-500 ease-in-out hover:scale-[0.98] hover:bg-darkHover sm:w-fit"
