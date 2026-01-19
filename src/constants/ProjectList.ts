@@ -35,6 +35,6 @@ export const ProjectList = [
     images: [dsaBuddy, dsaBuddy2, dsaBuddy3], 
     tech: ["MERN Full-Stack Platform", "Judge0 API", "Generative AI"],
     source: "https://github.com/prateekThakur84/DSA_Buddy",
-    demo: "https://dsa-buddy-frontend.onrender.com",
+    demo: "https://dsabuddyy.netlify.app",
   },
 ];
